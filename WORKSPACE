@@ -14,7 +14,9 @@ load("@rules_idris//idris:local_idris_loader.bzl", "loadIdris")
 loadIdris("/nix/store/iz7jahxg47hzhwapiwlc2xr2nqsixdkq-idris-1.3.1")
 
 git_repository(
-    name = "idris-effects",
-    remote = "https://github.com/shmish111/idris-effects.git",
-    commit = "89068f067085e8f342a8a7c8809a543fcffd3f5e",
+    name = "smoke-hill",
+    remote = "https://github.com/shmish111/smoke-hill.git",
+    commit = "73addb298b9b4d3cb7188c03627ff36ed16cd932",
 )
+load("@smoke-hill//:packages.bzl", "loadIdrisPackages")
+loadIdrisPackages()
